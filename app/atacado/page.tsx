@@ -6,6 +6,13 @@ import BlurText from "../components/BlurText";
 import FoldText from "../components/FoldText";
 import SpecularButton from "../components/SpecularButton";
 import Reveal from "../components/Reveal";
+import LogoLoop from "../components/LogoLoop";
+
+const partnerLogos = [
+  { src: "/logo-claro-loop.png", alt: "Claro" },
+  { src: "/logo-iplace-loop.png", alt: "iPlace", heightScale: 1.4 },
+  { src: "/logo-vivo-loop.png", alt: "Vivo" },
+];
 
 const benefits = [
   ["01", "Valorize seu catálogo", "Produtos premium aumentam a percepção de qualidade e ajudam a posicionar sua loja em outro patamar."],
@@ -162,6 +169,20 @@ export default function Home() {
         <div className="credibility-intro">
           <h2 id="credibility-title"><BlurText tag="span" text="Mais de 15 anos desenvolvendo acessórios premium" /></h2>
           <Reveal><p>Parceira de grandes revendas e das maiores operadoras de telefonia do Brasil.</p></Reveal>
+        </div>
+        <div className="credibility-logos">
+          <LogoLoop
+            logos={partnerLogos}
+            speed={60}
+            direction="left"
+            logoHeight={34}
+            gap={72}
+            fadeOut
+            fadeOutColor="#ebf2f7"
+            scaleOnHover
+            pauseOnHover
+            ariaLabel="Marcas parceiras da Customic"
+          />
         </div>
         <div className="trust-strip" aria-label="Destaques de credibilidade da Customic">
           <div><strong><FoldText text="+15" splitBy="char" hinge="top" trigger="scroll" fontSize="inherit" fontWeight="inherit" color="inherit" /></strong><span>+15 anos de pioneirismo em acessórios premium</span></div>

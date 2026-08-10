@@ -98,6 +98,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .credibility-intro { padding: 92px 6vw 50px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 7vw; align-items: end; }
 .credibility-intro h2 { max-width: 850px; margin: 0; font-size: clamp(40px,4.3vw,66px); line-height: 1.01; letter-spacing: -.058em; }
 .credibility-intro p { max-width: 470px; margin: 0 0 7px; color: var(--muted); font-size: 17px; line-height: 1.65; }
+.credibility-logos { padding: 0 6vw 46px; opacity: .82; }
 .trust-strip { min-height: 178px; padding: 30px 5vw; display: grid; grid-template-columns: repeat(5,1fr); align-items: stretch; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .trust-strip > div { min-width: 0; padding: 8px 22px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 13px; border-right: 1px solid var(--line); }
 .trust-strip > div:first-child { padding-left: 0; }
@@ -228,6 +229,7 @@ footer > p, footer > a:last-child { color: rgba(235,242,247,.62); font-size: 14p
   .full-field { grid-column: auto; }
   .credibility-intro { padding: 72px 22px 38px; grid-template-columns: 1fr; gap: 22px; }
   .credibility-intro p { font-size: 16px; }
+  .credibility-logos { padding: 0 22px 32px; }
   .trust-strip { padding: 18px 22px; grid-template-columns: 1fr; }
   .trust-strip > div, .trust-strip > div:first-child, .trust-strip > div:last-child { min-height: 116px; padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .trust-strip > div:last-child { grid-column: auto; border-bottom: 0; }
