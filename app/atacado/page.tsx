@@ -264,7 +264,7 @@ export default function Home() {
       </section>
 
       <section className="closing-section" id="cadastro-final">
-        <div className="closing-copy"><div className="closing-brand"><BrandLogo inverse /></div><h2><BlurText tag="span" text="Leve a Customic" /><br /><BlurText tag="span" text="para sua loja" delay={60} /></h2><Reveal><p>Cadastre sua empresa para conhecer nosso catálogo de capas e acessórios para celular no atacado, receber as condições comerciais e montar um mix premium para o seu negócio.</p></Reveal><div className="closing-note"><span><FoldText text="+15" splitBy="char" hinge="top" trigger="scroll" fontSize="inherit" fontWeight="inherit" color="inherit" /></span><p>Anos de experiência em<br />acessórios mobile.</p></div></div>
+        <div className="closing-copy"><div className="closing-brand"><BrandLogo inverse /></div><h2><BlurText tag="span" text="Leve a Customic" /><br /><BlurText tag="span" text="para sua loja" delay={60} /></h2><div className="closing-note"><span><FoldText text="+15" splitBy="char" hinge="top" trigger="scroll" fontSize="inherit" fontWeight="inherit" color="inherit" /></span><p>Anos de experiência em<br />acessórios mobile.</p></div></div>
         <div className="closing-cta-panel">
           <SpecularButton
             href="#cadastro"
