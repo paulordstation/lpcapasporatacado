@@ -81,8 +81,10 @@ const useResizeObserver = (
     return () => {
       observers.forEach(observer => observer?.disconnect());
     };
+    // `elements` is a fresh array literal from the call site every render; spread it so the
+    // effect keys off the stable ref identities inside instead of re-running on every render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [callback, elements, ...dependencies]);
+  }, [callback, ...elements, ...dependencies]);
 };
 
 const useImageLoader = (

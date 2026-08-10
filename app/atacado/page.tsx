@@ -44,7 +44,7 @@ const faqs = [
   ["Existe pedido mínimo?", "Não."],
   ["A Customic atende revendas menores?", "Sim. Temos condições comerciais pensadas para operações de diferentes portes."],
   ["A Customic entrega em todo o Brasil?", "Atendemos diferentes regiões do país. Disponibilidade, prazo e condições de entrega são confirmados pelo time comercial."],
-  ["Como funciona a oferta da máquina de películas?", "A disponibilidade da máquina na faixa depende das condições comerciais e da análise do perfil da revenda."],
+  ["Como funciona o pagamento em até 90 dias?", "A condição está sujeita à análise de crédito e ao perfil da revenda, e é aplicada conforme aprovação do time comercial."],
   ["Como recebo o catálogo e a tabela comercial?", "Preencha o cadastro para que nosso time entre em contato e apresente o portfólio e as condições disponíveis."],
 ];
 
@@ -168,21 +168,23 @@ export default function Home() {
       <section className="credibility-section" aria-labelledby="credibility-title">
         <div className="credibility-intro">
           <h2 id="credibility-title"><BlurText tag="span" text="Mais de 15 anos desenvolvendo acessórios premium" /></h2>
-          <Reveal><p>Parceira de grandes revendas e das maiores operadoras de telefonia do Brasil.</p></Reveal>
-        </div>
-        <div className="credibility-logos">
-          <LogoLoop
-            logos={partnerLogos}
-            speed={60}
-            direction="left"
-            logoHeight={34}
-            gap={72}
-            fadeOut
-            fadeOutColor="#ebf2f7"
-            scaleOnHover
-            pauseOnHover
-            ariaLabel="Marcas parceiras da Customic"
-          />
+          <div className="credibility-intro-side">
+            <Reveal><p>Parceira de grandes revendas e das maiores operadoras de telefonia do Brasil.</p></Reveal>
+            <div className="credibility-logos">
+              <LogoLoop
+                logos={partnerLogos}
+                speed={30}
+                direction="left"
+                logoHeight={34}
+                gap={72}
+                fadeOut
+                fadeOutColor="#ebf2f7"
+                scaleOnHover
+                pauseOnHover
+                ariaLabel="Marcas parceiras da Customic"
+              />
+            </div>
+          </div>
         </div>
         <div className="trust-strip" aria-label="Destaques de credibilidade da Customic">
           <div><strong><FoldText text="+15" splitBy="char" hinge="top" trigger="scroll" fontSize="inherit" fontWeight="inherit" color="inherit" /></strong><span>+15 anos de pioneirismo em acessórios premium</span></div>
@@ -193,13 +195,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="machine-offer-section" aria-label="Oferta de máquina de películas">
+      <section className="machine-offer-section" aria-label="Oportunidade comercial exclusiva">
         <div className="machine-callout">
           <div>
-            <p className="eyebrow">Máquina de películas</p>
-            <h3>Leve uma máquina de películas <em>na faixa</em> para sua loja</h3>
-            <Reveal><p>Amplie seu portfólio, ofereça películas para diferentes modelos de celular e crie uma nova oportunidade de faturamento recorrente.</p></Reveal>
-            <small>Oferta sujeita às condições comerciais e à análise do perfil da revenda.</small>
+            <p className="eyebrow">Condição especial</p>
+            <h3>Oportunidade comercial <em>exclusiva</em></h3>
+            <Reveal><p>Peça agora e pague em até 90 dias</p></Reveal>
+            <small>Condição sujeita à análise de crédito e ao perfil da revenda.</small>
           </div>
           <SpecularButton
             href="#cadastro"
