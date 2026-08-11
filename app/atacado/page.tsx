@@ -41,7 +41,6 @@ const audiences = [
 
 const faqs = [
   ["Preciso ter CNPJ para comprar no atacado?", "Sim. O atendimento comercial é destinado a empresas com CNPJ e está sujeito à análise cadastral."],
-  ["Existe pedido mínimo?", "Não."],
   ["A Customic atende revendas menores?", "Sim. Temos condições comerciais pensadas para operações de diferentes portes."],
   ["A Customic entrega em todo o Brasil?", "Atendemos diferentes regiões do país. Disponibilidade, prazo e condições de entrega são confirmados pelo time comercial."],
   ["Como funciona o pagamento em até 90 dias?", "A condição está sujeita à análise de crédito e ao perfil da revenda, e é aplicada conforme aprovação do time comercial."],
@@ -175,8 +174,8 @@ export default function Home() {
                 logos={partnerLogos}
                 speed={30}
                 direction="left"
-                logoHeight={34}
-                gap={72}
+                logoHeight={47}
+                gap={76}
                 fadeOut
                 fadeOutColor="#ebf2f7"
                 scaleOnHover
@@ -198,10 +197,8 @@ export default function Home() {
       <section className="machine-offer-section" aria-label="Oportunidade comercial exclusiva">
         <div className="machine-callout">
           <div>
-            <p className="eyebrow">Condição especial</p>
-            <h3>Oportunidade comercial <em>exclusiva</em></h3>
-            <Reveal><p>Peça agora e pague em até 90 dias</p></Reveal>
-            <small>Condição sujeita à análise de crédito e ao perfil da revenda.</small>
+            <p className="eyebrow">Oportunidade comercial exclusiva</p>
+            <h3>Peça agora e pague <em>em até 90 dias</em></h3>
           </div>
           <SpecularButton
             href="#cadastro"
