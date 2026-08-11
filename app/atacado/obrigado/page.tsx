@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Arrow, BrandLogo } from "../../components/Brand";
 
 export const metadata = {
   title: "Cadastro recebido | Customic Negócios",
@@ -7,13 +8,24 @@ export const metadata = {
 
 export default function ObrigadoPage() {
   return (
-    <main style={{ minHeight: "100vh", display: "grid", placeItems: "center", padding: 24, background: "#ebf2f7" }}>
-      <section style={{ maxWidth: 720, padding: "56px 42px", background: "#fff" }}>
-        <p style={{ color: "#3372c0", fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase" }}>Cadastro recebido</p>
-        <h1 style={{ margin: "12px 0 20px", fontSize: "clamp(42px, 6vw, 72px)", lineHeight: 1 }}>Obrigado pelo interesse em vender Customic.</h1>
-        <p style={{ fontSize: 18, lineHeight: 1.6 }}>Nosso time comercial recebeu seus dados e entrará em contato para apresentar o catálogo e as condições disponíveis.</p>
-        <Link href="/atacado" style={{ display: "inline-block", marginTop: 24, color: "#3372c0", fontWeight: 700 }}>Voltar para a página</Link>
+    <main>
+      <header className="site-header">
+        <a className="brand" href="/atacado" aria-label="Customic Negócios — início">
+          <BrandLogo />
+        </a>
+      </header>
+
+      <section className="hero-form thanks-hero">
+        <div className="lead-form lead-form-compact thanks-card">
+          <span className="success-mark" aria-hidden="true">✓</span>
+          <p className="eyebrow">Cadastro recebido</p>
+          <h1>Prontinho! Seus dados já estão com a gente.</h1>
+          <p>Um especialista do nosso time comercial vai analisar seu cadastro e entrar em contato em breve, pelo WhatsApp ou e-mail informado, para apresentar o catálogo completo e as condições comerciais da Customic.</p>
+          <Link href="/atacado" className="text-button">Voltar para o site</Link>
+        </div>
       </section>
+
+      <footer><a className="brand footer-brand" href="/atacado" aria-label="Customic Negócios — início"><BrandLogo inverse /></a><p>© 2026 Customic. Todos os direitos reservados.</p><a href="https://customic.com.br" target="_blank" rel="noreferrer">Conheça a marca <Arrow /></a></footer>
     </main>
   );
 }

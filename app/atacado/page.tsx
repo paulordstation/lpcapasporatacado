@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 import BlurText from "../components/BlurText";
 import FoldText from "../components/FoldText";
 import SpecularButton from "../components/SpecularButton";
 import Reveal from "../components/Reveal";
 import LogoLoop from "../components/LogoLoop";
+import { Arrow, BrandLogo } from "../components/Brand";
 
 const partnerLogos = [
   { src: "/logo-claro-loop.png", alt: "Claro" },
@@ -47,22 +49,6 @@ const faqs = [
   ["Como recebo o catálogo e a tabela comercial?", "Preencha o cadastro para que nosso time entre em contato e apresente o portfólio e as condições disponíveis."],
 ];
 
-function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
-
-function BrandLogo({ inverse = false }: { inverse?: boolean }) {
-  return (
-    <span className={`brand-logo ${inverse ? "brand-logo-inverse" : ""}`}>
-      <span className="logo-crop" aria-hidden="true">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/customic-logo.png" alt="" />
-      </span>
-      <small>negócios</small>
-    </span>
-  );
-}
-
 const RD_FORM_ID = "prl-formulario-capas-por-atacado-e33bc4b816af6a6e7f98";
 const RD_ACCOUNT_TOKEN = "UA-28628232-1";
 
@@ -74,6 +60,7 @@ declare global {
 
 function LeadForm() {
   const initialized = useRef(false);
+  const router = useRouter();
 
   function initRdForm() {
     if (initialized.current || typeof window === "undefined" || !window.RDStationForms) return;
@@ -84,6 +71,27 @@ function LeadForm() {
   useEffect(() => {
     initRdForm();
   }, []);
+
+  useEffect(() => {
+    const container = document.getElementById(RD_FORM_ID);
+    if (!container) return;
+    // RD Station doesn't expose a documented success callback, but it always removes its
+    // injected <form> once a submission converts (to show its own thank-you state). We wait
+    // until that <form> has actually rendered, then treat its removal as the success signal.
+    let formSeen = false;
+    const observer = new MutationObserver(() => {
+      if (container.querySelector("form")) {
+        formSeen = true;
+        return;
+      }
+      if (formSeen) {
+        observer.disconnect();
+        router.push("/atacado/obrigado");
+      }
+    });
+    observer.observe(container, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, [router]);
 
   return (
     <div className="lead-form lead-form-compact">
