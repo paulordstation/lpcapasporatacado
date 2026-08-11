@@ -9,6 +9,8 @@ type ButtonSize = "sm" | "md" | "lg";
 export interface SpecularButtonProps {
   children?: ReactNode;
   href?: string;
+  target?: string;
+  rel?: string;
   size?: ButtonSize;
   radius?: number;
   tint?: string;
@@ -108,6 +110,8 @@ void main() {
 export default function SpecularButton({
   children = "Get Started",
   href,
+  target,
+  rel,
   size = "lg",
   radius = 18,
   tint = "#ffffff",
@@ -274,7 +278,7 @@ export default function SpecularButton({
 
   if (href) {
     return (
-      <a ref={btnRef} href={href} className={sharedClassName} style={sharedStyle} onClick={onClick as MouseEventHandler<HTMLAnchorElement>}>
+      <a ref={btnRef} href={href} target={target} rel={rel} className={sharedClassName} style={sharedStyle} onClick={onClick as MouseEventHandler<HTMLAnchorElement>}>
         {content}
       </a>
     );

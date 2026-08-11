@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Arrow, BrandLogo } from "../../components/Brand";
+import SpecularButton from "../../components/SpecularButton";
 
 export const metadata = {
   title: "Cadastro recebido | Customic Negócios",
@@ -21,7 +21,21 @@ export default function ObrigadoPage() {
           <p className="eyebrow">Cadastro recebido</p>
           <h1>Prontinho! Seus dados já estão com a gente.</h1>
           <p>Um especialista do nosso time comercial vai analisar seu cadastro e entrar em contato em breve, pelo WhatsApp ou e-mail informado, para apresentar o catálogo completo e as condições comerciais da Customic.</p>
-          <Link href="/atacado" className="text-button">Voltar para o site</Link>
+          <SpecularButton
+            href="https://www.customic.com.br/"
+            target="_blank"
+            rel="noreferrer"
+            size="md"
+            radius={0}
+            className="sb-thanks-cta"
+            tint="#3372c0"
+            tintOpacity={1}
+            baseColor="#1c2b3d"
+            lineColor="#ffffff"
+            textColor="#ffffff"
+          >
+            Conheça a Customic <Arrow />
+          </SpecularButton>
         </div>
       </section>
 
