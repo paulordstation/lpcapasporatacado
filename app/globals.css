@@ -78,9 +78,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .text-button { padding: 0 0 4px; border: 0; border-bottom: 1px solid var(--purple); background: transparent; color: var(--purple); cursor: pointer; font-size: 17px; font-weight: 650; }
 
 .thanks-hero { min-height: 100vh; }
+.thanks-card { padding-bottom: 15px; }
 .thanks-card h1 { max-width: 460px; margin: 0 0 18px; font-size: clamp(32px,3.4vw,46px); line-height: 1.05; letter-spacing: -.045em; }
 .thanks-card p { max-width: 460px; margin: 0; color: var(--muted); font-size: 18px; line-height: 1.6; }
-.sb-thanks-cta { margin-top: 30px; }
+.thanks-card .sb-thanks-cta { margin-top: 15px; }
 
 .rd-form-embed { min-height: 340px; }
 .rd-form-embed .rd-form-container { width: 100%; }
