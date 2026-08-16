@@ -12,7 +12,7 @@ export default function RedirectToWhatsapp() {
     // antes do navegador sair para o WhatsApp.
     const timer = setTimeout(() => {
       window.location.href = WHATSAPP_URL;
-    }, 400);
+    }, 650);
 
     return () => clearTimeout(timer);
   }, []);
