@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/atacado/obrigado"],
     },
-    sitemap: "https://customic.com.br/sitemap.xml",
+    sitemap: "https://atacado.customicb2b.com.br/sitemap.xml",
   };
 }
