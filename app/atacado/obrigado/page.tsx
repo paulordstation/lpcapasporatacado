@@ -1,5 +1,6 @@
 import { Arrow, BrandLogo } from "../../components/Brand";
 import SpecularButton from "../../components/SpecularButton";
+import RedirectToWhatsapp from "./RedirectToWhatsapp";
 
 export const metadata = {
   title: "Cadastro recebido | Customic Negócios",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function ObrigadoPage() {
   return (
     <main>
+      <RedirectToWhatsapp />
       <header className="site-header">
         <a className="brand" href="/atacado" aria-label="Customic Negócios — início">
           <BrandLogo />
