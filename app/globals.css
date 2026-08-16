@@ -78,8 +78,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .thanks-hero { min-height: 100vh; }
 .thanks-minimal { place-items: center; text-align: center; }
-.thanks-minimal-content h1 { margin: 0 0 14px; font-size: clamp(44px,7vw,92px); font-weight: 800; letter-spacing: -.04em; text-transform: uppercase; color: var(--ink); }
-.thanks-minimal-content p { margin: 0; color: var(--muted); font-size: clamp(18px,2vw,24px); line-height: 1.5; }
+.thanks-minimal-content h1 { margin: 0 0 14px; font-size: clamp(44px,7vw,92px); font-weight: 800; letter-spacing: -.04em; text-transform: uppercase; color: #ffffff; text-shadow: 0 6px 30px rgba(0,0,2,.4); }
+.thanks-minimal-content p { margin: 0; color: #ffffff; font-size: clamp(18px,2vw,24px); line-height: 1.5; text-shadow: 0 4px 20px rgba(0,0,2,.4); }
 
 .rd-form-embed { min-height: 340px; }
 .rd-form-embed .rd-form-container { width: 100%; }
